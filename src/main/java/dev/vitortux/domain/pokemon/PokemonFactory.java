@@ -8,14 +8,17 @@ public class PokemonFactory {
     private PokemonFactory() {
     }
 
+    /**
+     * Este método segue o {@code Padrão Factory}, centralizando a criação de
+     * objetos Pokémon e abstraindo a lógica de instância para reduzir o acoplamento
+     * e facilitar a manutenção.
+     */
     public static Pokemon create(PokemonType type) {
         switch (type) {
             case CHARMANDER:
                 return new Pokemon("Charmander", 5, 39, 52, 43, 0, new Growl(), new Scratch());
-            case BULBASAUR:
-                // return new Pokemon("Bulbasaur", 5, 45, 49, 49, 0);
-            case SQUIRTLE:
-                // return new Pokemon("Squirtle", 5, 44, 48, 65, 0);
+            case BULBASAUR, SQUIRTLE:
+                //
             default:
                 throw new IllegalArgumentException("Unknown Pokémon type: " + type);
         }
