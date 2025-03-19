@@ -6,6 +6,6 @@ public class Growl implements MoveStrategy {
 
     @Override
     public void execute(Pokemon attacker, Pokemon defender) {
-        System.out.println("Growl");
+        System.out.println(attacker.getName() + " usou Growl!");
     }
 }

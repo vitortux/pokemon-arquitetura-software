@@ -6,6 +6,6 @@ public class Scratch implements MoveStrategy {
 
     @Override
     public void execute(Pokemon attacker, Pokemon defender) {
-        System.out.println("Scratch");
+        System.out.println(attacker.getName() + " usou Scratch!");
     }
 }

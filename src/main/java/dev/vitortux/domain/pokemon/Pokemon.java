@@ -31,9 +31,13 @@ public class Pokemon {
         try {
             moves[index].execute(this, defender);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Invalid move index: " + index);
+            System.out.println("Índice de move inválido: " + index);
         } catch (NullPointerException e) {
-            System.out.println("No move at index: " + index);
+            System.out.println("Nenhum move no índice: " + index);
         }
+    }
+
+    public String getName() {
+        return name;
     }
 }

@@ -1,7 +1,9 @@
 package dev.vitortux;
 
+import dev.vitortux.domain.game.Game;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Game.getInstance().start();
     }
 }
