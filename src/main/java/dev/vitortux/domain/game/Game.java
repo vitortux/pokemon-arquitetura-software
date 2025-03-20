@@ -4,7 +4,6 @@ import dev.vitortux.domain.item.ItemGroup;
 import dev.vitortux.domain.item.Potion;
 import dev.vitortux.domain.player.Player;
 import dev.vitortux.domain.pokemon.PokemonFactory;
-import dev.vitortux.domain.pokemon.PokemonType;
 
 /**
  * A classe {@code Game} implementa o padrão de projeto Singleton para garantir
@@ -46,7 +45,7 @@ public class Game {
      */
     public void start() {
         // Factory:
-        this.player = new Player("Red", PokemonFactory.create(PokemonType.CHARMANDER));
+        this.player = new Player("Red", PokemonFactory.CHARMANDER.create());
 
         this.player.addItem(new Potion(), 1); // Poção simples
         this.player.addItem(new ItemGroup(new Potion(), new Potion()), 1); // Grupo de poções
